@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9460c04f-3397-41bb-a00e-c796e1091987" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/InteresadoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/MarcaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/ModeloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/PosicionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/PruebaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Interesado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Marca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Modelo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Posicion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Prueba.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/repositories/InteresadoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/repositories/MarcaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/repositories/ModeloRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/repositories/PosicionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/repositories/PruebaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agencia/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Vehiculo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -109,6 +125,8 @@
       <workItem from="1732359173340" duration="11290000" />
       <workItem from="1732405074032" duration="109000" />
       <workItem from="1732405298074" duration="804000" />
+      <workItem from="1732446806040" duration="36000" />
+      <workItem from="1732446874027" duration="8768000" />
     </task>
     <servers />
   </component>

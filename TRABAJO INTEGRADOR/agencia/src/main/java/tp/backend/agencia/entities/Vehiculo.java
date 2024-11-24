@@ -1,24 +1,44 @@
 package tp.backend.agencia.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "Vehiculos")
 public class Vehiculo {
     @Id
-    private int id;
-    private String patente;
-    private int anio;
-    private int id_modelo;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
+    private Integer id;
 
-    public int getId() {
-        return id;
+    @Column(name = "PATENTE", nullable = false)
+    private String patente;
+
+    @ManyToOne
+    @JoinColumn(name = "ID_MODELO", nullable = false)
+    @JsonBackReference // Evita ciclos si Modelo tiene una referencia de vuelta
+    private Modelo modelo;
+
+    @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Posicion> posiciones = new HashSet<>();
+
+    @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Prueba> pruebas = new HashSet<>();
+
+    public Vehiculo(){}
+    public Vehiculo(Integer id, String patente, Modelo modelo) {
+        this.id = id;
+        this.patente = patente;
+        this.modelo = modelo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public Integer getId() {
+        return id;
     }
 
     public String getPatente() {
@@ -29,19 +49,28 @@ public class Vehiculo {
         this.patente = patente;
     }
 
-    public int getAnio() {
-        return anio;
+    public Modelo getModelo() {
+        return modelo;
     }
 
-    public void setAnio(int anio) {
-        this.anio = anio;
+    public void setModelo(Modelo modelo) {
+        this.modelo = modelo;
     }
 
-    public int getId_modelo() {
-        return id_modelo;
+    public Set<Prueba> getPruebas() {
+        return pruebas;
     }
 
-    public void setId_modelo(int modelo) {
-        this.id_modelo = modelo;
+    public void setPruebas(Set<Prueba> pruebas) {
+        this.pruebas = pruebas;
     }
+
+    public Set<Posicion> getPosicion() {
+        return posiciones;
+    }
+
+    public void setPosicion(Set<Posicion> posiciones) {
+        this.posiciones = posiciones;
+    }
+
 }
