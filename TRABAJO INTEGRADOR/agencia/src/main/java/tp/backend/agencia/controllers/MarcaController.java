@@ -3,12 +3,8 @@ package tp.backend.agencia.controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import tp.backend.agencia.entities.Marca;
-import tp.backend.agencia.repositories.MarcaRepository;
 import tp.backend.agencia.services.interfaces.MarcaService;
 
 import java.util.NoSuchElementException;
@@ -19,6 +15,7 @@ import java.util.List;
 @RequestMapping("/api/agencia/marca")
 @RequiredArgsConstructor
 public class MarcaController {
+
     /*
     private final MarcaRepository marcaRepository;
 
@@ -54,6 +51,31 @@ public class MarcaController {
         }
         return new ResponseEntity<>(marcas, HttpStatus.OK);
     }
+
+    @PostMapping
+    public ResponseEntity<Object> addMarca(@RequestBody Marca marca) {
+        try{
+            this.marcaService.create(marca);
+            return new ResponseEntity<>(marca, HttpStatus.CREATED);
+        }
+        catch (NoSuchElementException e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Marca> deleteById(@PathVariable Integer id) {
+        try{
+            Marca marca = this.marcaService.delete(id);
+            return ResponseEntity.ok(marca);
+        }
+        catch (NoSuchElementException e){
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
 
 
 

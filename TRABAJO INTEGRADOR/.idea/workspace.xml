@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9460c04f-3397-41bb-a00e-c796e1091987" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/MarcaServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/ModeloServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/ServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/interfaces/MarcaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/interfaces/ModeloService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/interfaces/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/EmpleadoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/MarcaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/MarcaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/repositories/MarcaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/repositories/MarcaRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +116,7 @@
       <workItem from="1732405298074" duration="804000" />
       <workItem from="1732446806040" duration="36000" />
       <workItem from="1732446874027" duration="10563000" />
-      <workItem from="1732464666425" duration="9991000" />
+      <workItem from="1732464666425" duration="12460000" />
     </task>
     <servers />
   </component>
