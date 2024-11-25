@@ -10,7 +10,9 @@ import tp.backend.agencia.repositories.EmpleadoRepository;
 import java.util.List;
 
 @RestController
+
 public class EmpleadoController {
+
     private final EmpleadoRepository empleadoRepository;
 
     public EmpleadoController(EmpleadoRepository empleadoRepository) {
@@ -21,4 +23,6 @@ public class EmpleadoController {
     public List<Empleado> getEmpleados() {
         return empleadoRepository.findAll();
     }
+
+
 }
