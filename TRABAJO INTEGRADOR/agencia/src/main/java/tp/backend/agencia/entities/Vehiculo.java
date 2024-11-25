@@ -20,7 +20,7 @@ public class Vehiculo {
 
     @ManyToOne
     @JoinColumn(name = "ID_MODELO", nullable = false)
-    @JsonBackReference // Evita ciclos si Modelo tiene una referencia de vuelta
+    //@JsonBackReference // Evita ciclos si Modelo tiene una referencia de vuelta
     private Modelo modelo;
 
     @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

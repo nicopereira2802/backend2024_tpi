@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/agencia/marca")
+@RequestMapping("/api/agencia/marcas")
 @RequiredArgsConstructor
 public class MarcaController {
 

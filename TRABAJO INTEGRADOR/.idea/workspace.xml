@@ -5,8 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9460c04f-3397-41bb-a00e-c796e1091987" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/EmpleadoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/InteresadoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/PosicionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/PruebaServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/VehiculoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/interfaces/EmpleadoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/interfaces/InteresadoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/interfaces/PosicionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/interfaces/PruebaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/interfaces/VehiculoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/EmpleadoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/InteresadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/InteresadoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/MarcaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/MarcaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/ModeloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/ModeloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/PosicionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/PosicionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/PruebaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/VehiculoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Marca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Modelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/entities/Vehiculo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +136,8 @@
       <workItem from="1732405298074" duration="804000" />
       <workItem from="1732446806040" duration="36000" />
       <workItem from="1732446874027" duration="10563000" />
-      <workItem from="1732464666425" duration="12460000" />
+      <workItem from="1732464666425" duration="18047000" />
+      <workItem from="1732549165574" duration="7054000" />
     </task>
     <servers />
   </component>

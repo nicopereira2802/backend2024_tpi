@@ -1,8 +1,6 @@
 package tp.backend.agencia.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -22,7 +20,6 @@ public class Modelo {
 
     @ManyToOne
     @JoinColumn(name = "ID_MARCA", nullable = false) // Aquí está la FK hacia Marca
-    @JsonBackReference
     private Marca marca;
 
     @OneToMany(mappedBy = "modelo", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
