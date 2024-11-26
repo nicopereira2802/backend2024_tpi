@@ -2,11 +2,13 @@ package tp.backend.agencia.entities;
 
 import jakarta.persistence.*;
 import jdk.jfr.MemoryAddress;
+import lombok.Data;
 
 import java.util.Date;
 
 @Entity
 @Table(name = "Pruebas")
+@Data
 public class Prueba {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,9 +38,13 @@ public class Prueba {
     @JoinColumn(name = "ID_INTERESADO", nullable = false) // FK hacia Interesado
     private Interesado interesado;
 
+    @ManyToOne
+    @JoinColumn(name = "ID_ZONA_RESTRINGIDA", nullable = false)
+    private ZonaRestringida zonaRestringida;
+
     public Prueba() {}
 
-    public Prueba(Integer id, Date fechaHoraInicio, Date fechaHoraFin, String comentario, Empleado empleado, Vehiculo vehiculo, Interesado interesado) {
+    public Prueba(Integer id, Date fechaHoraInicio, Date fechaHoraFin, String comentario, Empleado empleado, Vehiculo vehiculo, Interesado interesado, ZonaRestringida zonaRestringida) {
         this.id = id;
         this.fechaHoraInicio = fechaHoraInicio;
         this.fechaHoraFin = fechaHoraFin;
@@ -46,6 +52,7 @@ public class Prueba {
         this.empleado = empleado;
         this.vehiculo = vehiculo;
         this.interesado = interesado;
+        this.zonaRestringida = zonaRestringida;
     }
 
     public Integer getId() {

@@ -2,15 +2,19 @@ package tp.backend.agencia.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 
 @Entity
 @Table(name = "Interesados")
+@Data
 public class Interesado {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
@@ -52,6 +56,7 @@ public class Interesado {
         this.restringido = restringido;
         this.nroLicencia = nroLicencia;
         this.fechaVencimientoLicencia = fechaVencimientoLicencia;
+
     }
 
     public Integer getId() {

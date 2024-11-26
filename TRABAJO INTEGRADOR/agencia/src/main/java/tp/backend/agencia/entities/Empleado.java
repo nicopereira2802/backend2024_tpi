@@ -1,12 +1,14 @@
 package tp.backend.agencia.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "Empleados")
+@Data
 public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +28,11 @@ public class Empleado {
     @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private Set<Prueba> pruebas = new HashSet<>();
+
+    @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private Set<EmpleadoNotificacion> notificaciones = new HashSet<>();
+
 
     public Empleado() {}
 

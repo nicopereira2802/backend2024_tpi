@@ -128,7 +128,7 @@ public class PruebaServiceImpl extends ServiceImpl<Prueba, Integer> implements P
         Prueba prueba = pruebaRepository.findById(idPrueba).orElseThrow(() -> new NoSuchElementException("La prueba no existe"));
 
         if (prueba.getFechaHoraFin() != null) {
-            throw new IllegalArgumentException("La prueba ya está finalizo.");
+            throw new IllegalArgumentException("La prueba ya había finalizado.");
         }
 
         prueba.setFechaHoraFin(new Date());
