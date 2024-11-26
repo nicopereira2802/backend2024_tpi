@@ -1,12 +1,14 @@
 package tp.backend.agencia.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Date;
 
 
 @Entity
 @Table(name = "Posiciones")
+@Data
 public class Posicion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

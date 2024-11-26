@@ -2,6 +2,7 @@ package tp.backend.agencia.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,6 +10,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "Modelos")
+@Data
 public class Modelo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

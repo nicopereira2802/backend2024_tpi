@@ -1,12 +1,14 @@
 package tp.backend.agencia.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "Marcas")
+@Data
 public class Marca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

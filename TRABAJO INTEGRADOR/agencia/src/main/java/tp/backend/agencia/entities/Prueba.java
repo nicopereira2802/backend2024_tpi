@@ -2,11 +2,13 @@ package tp.backend.agencia.entities;
 
 import jakarta.persistence.*;
 import jdk.jfr.MemoryAddress;
+import lombok.Data;
 
 import java.util.Date;
 
 @Entity
 @Table(name = "Pruebas")
+@Data
 public class Prueba {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
