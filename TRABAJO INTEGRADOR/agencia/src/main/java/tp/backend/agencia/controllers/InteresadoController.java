@@ -4,10 +4,7 @@ package tp.backend.agencia.controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import tp.backend.agencia.entities.Interesado;
 import tp.backend.agencia.services.interfaces.InteresadoService;
 
@@ -39,6 +36,29 @@ public class InteresadoController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(interesados, HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<Object> addInteresado(@RequestBody Interesado interesado) {
+        try{
+            this.interesadoService.create(interesado);
+            return new ResponseEntity<>(interesado, HttpStatus.CREATED);
+        }
+        catch (NoSuchElementException e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Interesado> deleteById(@PathVariable Integer id) {
+        try{
+            Interesado interesado = this.interesadoService.delete(id);
+            return ResponseEntity.ok(interesado);
+        }
+        catch (NoSuchElementException e){
+            return ResponseEntity.notFound().build();
+        }
     }
 
 }

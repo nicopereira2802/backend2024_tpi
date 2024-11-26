@@ -3,11 +3,7 @@ package tp.backend.agencia.controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 import tp.backend.agencia.entities.Prueba;
 
 import tp.backend.agencia.services.interfaces.PruebaService;
@@ -40,5 +36,17 @@ public class PruebaController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(pruebas, HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<Object> addPrueba(@RequestBody Prueba prueba) {
+        try{
+            this.pruebaService.create(prueba);
+            return new ResponseEntity<>(prueba, HttpStatus.CREATED);
+        }
+        catch (NoSuchElementException e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
+        }
     }
 }

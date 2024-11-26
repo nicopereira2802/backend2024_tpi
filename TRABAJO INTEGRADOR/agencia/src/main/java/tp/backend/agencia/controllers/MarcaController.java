@@ -74,10 +74,4 @@ public class MarcaController {
             return ResponseEntity.notFound().build();
         }
     }
-
-
-
-
-
-
 }

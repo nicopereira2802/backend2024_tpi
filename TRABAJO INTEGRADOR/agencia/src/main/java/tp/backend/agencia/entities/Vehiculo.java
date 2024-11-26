@@ -23,11 +23,12 @@ public class Vehiculo {
     //@JsonBackReference // Evita ciclos si Modelo tiene una referencia de vuelta
     private Modelo modelo;
 
-    @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "vehiculo",  cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private Set<Posicion> posiciones = new HashSet<>();
 
-    @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "vehiculo",  cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private Set<Prueba> pruebas = new HashSet<>();
 
     public Vehiculo(){}

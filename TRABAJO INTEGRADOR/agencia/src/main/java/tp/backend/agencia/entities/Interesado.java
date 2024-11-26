@@ -1,5 +1,6 @@
 package tp.backend.agencia.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -38,6 +39,7 @@ public class Interesado {
     private Date fechaVencimientoLicencia;
 
     @OneToMany(mappedBy = "interesado", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private Set<Prueba> pruebas = new HashSet<>();
 
     public Interesado(){}

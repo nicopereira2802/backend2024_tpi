@@ -1,4 +1,5 @@
 package tp.backend.agencia.entities;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -21,7 +22,9 @@ public class Empleado {
     @Column(name = "TELEFONO_CONTACTO", nullable = false)
     private Integer telefono;
 
+
     @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private Set<Prueba> pruebas = new HashSet<>();
 
     public Empleado() {}
