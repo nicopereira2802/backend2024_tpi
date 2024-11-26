@@ -9,6 +9,7 @@ import tp.backend.agencia.entities.Prueba;
 import tp.backend.agencia.services.interfaces.PruebaService;
 
 import java.util.List;
+import java.util.Map;
 import java.util.NoSuchElementException;
 
 @RestController
@@ -60,4 +61,20 @@ public class PruebaController {
         }
         return new ResponseEntity<>(pruebasEnCurso, HttpStatus.OK); // Devuelve 200 con la lista de pruebas en curso
     }
+
+    //Punto c
+    @PatchMapping("/{idPrueba}/end")
+    public ResponseEntity<Prueba> finalizarPrueba(
+            @PathVariable Integer idPrueba,
+            @RequestBody Map<String, String> body) {
+        try {
+            String comentario = body.get("comentario");
+            return ResponseEntity.ok(pruebaService.finalizarPrueba(idPrueba, comentario));
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
 }

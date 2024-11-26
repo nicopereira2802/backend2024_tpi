@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface PruebaService extends Service<Prueba,Integer>{
     List<Prueba> findPruebasEnCurso();
+    Prueba finalizarPrueba(Integer idPrueba, String comentario);
+
 }

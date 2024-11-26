@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9460c04f-3397-41bb-a00e-c796e1091987" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/controllers/PruebaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/repositories/PruebaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/repositories/PruebaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/PruebaServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/interfaces/PruebaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agencia/src/main/java/tp/backend/agencia/services/interfaces/PruebaService.java" afterDir="false" />
     </list>
@@ -123,7 +121,7 @@
       <workItem from="1732464666425" duration="18047000" />
       <workItem from="1732549165574" duration="7054000" />
       <workItem from="1732586412160" duration="18000" />
-      <workItem from="1732586451875" duration="9398000" />
+      <workItem from="1732586451875" duration="11123000" />
     </task>
     <servers />
   </component>

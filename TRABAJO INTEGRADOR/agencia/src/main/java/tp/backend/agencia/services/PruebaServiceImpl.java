@@ -14,6 +14,7 @@ import tp.backend.agencia.services.interfaces.PruebaService;
 
 import java.util.Date;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 @RequiredArgsConstructor
@@ -117,7 +118,23 @@ public class PruebaServiceImpl extends ServiceImpl<Prueba, Integer> implements P
 
     }
 
+    // Busqueda de fechaHora NULL para punto 2
     public List<Prueba> findPruebasEnCurso() {
         return pruebaRepository.findByFechaHoraFinIsNull();
     }
+
+    // Patch para punto 3
+    public Prueba finalizarPrueba(Integer idPrueba, String comentario) {
+        Prueba prueba = pruebaRepository.findById(idPrueba).orElseThrow(() -> new NoSuchElementException("La prueba no existe"));
+
+        if (prueba.getFechaHoraFin() != null) {
+            throw new IllegalArgumentException("La prueba ya está finalizo.");
+        }
+
+        prueba.setFechaHoraFin(new Date());
+        prueba.setComentario(comentario);
+
+        return pruebaRepository.save(prueba);
+    }
+
 }
