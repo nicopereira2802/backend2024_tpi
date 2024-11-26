@@ -23,20 +23,20 @@ public class PruebaServiceImpl extends ServiceImpl<Prueba, Integer> implements P
     private final VehiculoRepository vehiculoRepository;
     private final EmpleadoRepository empleadoRepository;
 
+    /*
+    VALIDACIONES SI EXISTEN LOS OBJETOS
+    */
     private void validarPrueba(Prueba prueba) {
         Interesado interesado = prueba.getInteresado();
-
         // Validar si el cliente está restringido
         if (interesado.getRestringido() != null && interesado.getRestringido()) {
             throw new IllegalArgumentException("El cliente está restringido y no puede realizar pruebas.");
         }
-
         // Validar si la licencia está vencida
         if (interesado.getFechaVencimientoLicencia() == null ||
                 interesado.getFechaVencimientoLicencia().before(new Date())) {
             throw new IllegalArgumentException("La licencia del cliente está vencida o no válida.");
         }
-
         // Validar si el vehículo está en uso
         if (pruebaRepository.existsByVehiculoAndFechaHoraFinIsNull(prueba.getVehiculo())) {
             throw new IllegalArgumentException("El vehículo ya está en una prueba activa.");
@@ -70,21 +70,20 @@ public class PruebaServiceImpl extends ServiceImpl<Prueba, Integer> implements P
         if (interesado.getRestringido() == null) {
             throw new IllegalArgumentException("El atributo 'restringido' del interesado es null.");
         }
-
-        // Asignar el interesado al objeto prueba
         entity.setInteresado(interesado);
+
 
         // Cargar y validar otros objetos relacionados
         Vehiculo vehiculo = vehiculoRepository.findById(entity.getVehiculo().getId())
                 .orElseThrow(() -> new IllegalArgumentException("El vehículo no existe."));
         entity.setVehiculo(vehiculo);
 
+
         Empleado empleado = empleadoRepository.findById(entity.getEmpleado().getLegajo())
                 .orElseThrow(() -> new IllegalArgumentException("El empleado no existe."));
         entity.setEmpleado(empleado);
 
         validarRelaciones(entity);
-        // Realizar validaciones
         validarPrueba(entity);
 
         this.pruebaRepository.save(entity);
@@ -115,5 +114,10 @@ public class PruebaServiceImpl extends ServiceImpl<Prueba, Integer> implements P
     @Override
     public boolean existById(Integer id) {
         return this.pruebaRepository.existsById(id);
+
+    }
+
+    public List<Prueba> findPruebasEnCurso() {
+        return pruebaRepository.findByFechaHoraFinIsNull();
     }
 }

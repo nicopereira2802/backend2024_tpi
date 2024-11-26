@@ -38,6 +38,7 @@ public class PruebaController {
         return new ResponseEntity<>(pruebas, HttpStatus.OK);
     }
 
+    // Punto a
     @PostMapping
     public ResponseEntity<Object> addPrueba(@RequestBody Prueba prueba) {
         try{
@@ -48,5 +49,15 @@ public class PruebaController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
         }
+    }
+
+    //Punto b
+    @GetMapping("/in-course")
+    public ResponseEntity<List<Prueba>> getPruebasEnCurso() {
+        List<Prueba> pruebasEnCurso = pruebaService.findPruebasEnCurso();
+        if (pruebasEnCurso.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT); // Devuelve 204 si no hay pruebas en curso
+        }
+        return new ResponseEntity<>(pruebasEnCurso, HttpStatus.OK); // Devuelve 200 con la lista de pruebas en curso
     }
 }
